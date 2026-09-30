@@ -1,0 +1,31 @@
+rules_version = '2';
+
+// MRDS GROUP ALL RAJSTHAN PVT. LTD.
+// Sirf admin (vschhawari0786@gmail.com) likh sakta hai.
+// Har koi padh sakta hai.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email == 'vschhawari0786@gmail.com';
+    }
+
+    match /properties/{propId} {
+      // sabko dikhna hai
+      allow read: if true;
+
+      // sirf admin add / edit / delete
+      allow create, update, delete: if isAdmin();
+
+      match /{document=**} {
+        allow read, write: if false;
+      }
+    }
+
+    // baaki koi collection nahi
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

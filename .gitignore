@@ -1,0 +1,43 @@
+# ============================================================
+#  MRDS GROUP ALL RAJSTHAN — Git ignore
+#  Ye file GitHub par NAHI jayegi
+# ============================================================
+
+# dependencies
+node_modules/
+
+# build output
+dist/
+build/
+
+# Firebase
+.firebase/
+.firebaserc.bak
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# secrets — KABHI GitHub par nahi
+.env
+.env.*
+*.secret
+*-secret*.txt
+.mrds-admin-uid
+setup-firebase.mjs
+seed-firestore.mjs
+fix-*.mjs
+
+# logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# temp
+*.tmp
+temp/

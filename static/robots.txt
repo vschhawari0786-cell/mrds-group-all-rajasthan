@@ -1,0 +1,12 @@
+# robots.txt — MRDS GROUP ALL RAJSTHAN PVT. LTD.
+# https://mrds-28d50.web.app
+
+User-agent: *
+Allow: /
+
+# एडमिन पैनल / लॉगिन — गूगल इनडेक्स न करे
+Disallow: /?logout
+Disallow: /*?id=
+Disallow: /admin
+
+Sitemap: https://mrds-28d50.web.app/sitemap.xml
